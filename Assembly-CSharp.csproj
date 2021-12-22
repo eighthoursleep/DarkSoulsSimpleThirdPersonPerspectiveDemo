@@ -52,11 +52,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraMgr.cs" />
-     <Compile Include="Assets\Scripts\SingletonAuto.cs" />
-     <Compile Include="Assets\Scripts\PlayerMgr.cs" />
-     <Compile Include="Assets\Scripts\SingletonMono.cs" />
      <Compile Include="Assets\Scripts\InputMgr.cs" />
+     <Compile Include="Assets\Scripts\SingletonMono.cs" />
+     <Compile Include="Assets\Scripts\CameraMgr.cs" />
+     <Compile Include="Assets\Scripts\PlayerMgr.cs" />
+     <Compile Include="Assets\Scripts\SingletonAuto.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/Program Files/Unity 2020.3.24f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

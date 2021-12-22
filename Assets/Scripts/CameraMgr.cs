@@ -16,14 +16,6 @@ public class CameraMgr : SingletonMono<CameraMgr>
 
     private GameObject cameraArm;
 
-    public Vector3 CameraForward
-    {
-        get
-        {
-            return transform.forward;
-        }
-    }
-    
     private new void Awake()
     {
         base.Awake();
@@ -33,8 +25,7 @@ public class CameraMgr : SingletonMono<CameraMgr>
         cameraArm.transform.SetParent(transform);
         cameraArm.transform.rotation = transform.rotation;
     }
-
-    void FixedUpdate()
+    void LateUpdate()
     {
         FlowTarget();
         RotateX(InputMgr.Instance.mouseX);
@@ -43,7 +34,7 @@ public class CameraMgr : SingletonMono<CameraMgr>
         {
             ZoomIn(InputMgr.Instance.mouseScroll);
         }
-        UpdateCameraPos(Time.fixedTime);
+        UpdateCameraLocalPos();
     }
 
     void RotateX(float value)
@@ -80,10 +71,10 @@ public class CameraMgr : SingletonMono<CameraMgr>
 
     void FlowTarget()
     {
-        transform.position = target.position;
+        transform.position = target.position; ;
     }
 
-    void UpdateCameraPos(float delta)
+    void UpdateCameraLocalPos()
     {
         cameraView.position = cameraArm.transform.position;
         cameraView.forward = cameraArm.transform.forward;

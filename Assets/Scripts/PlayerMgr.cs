@@ -52,7 +52,7 @@ public class PlayerMgr : SingletonMono<PlayerMgr>
 
     private void UpdateTargetDirection(float horizontal, float vertical)
     {
-        Vector3 camForward = CameraMgr.Instance.CameraForward;
+        Vector3 camForward = CameraMgr.Instance.transform.forward;
         Vector3 camTarget = playerTransform.position + (camForward * 10.0f);
         Debug.DrawLine(playerTransform.position,camTarget, Color.red);
 

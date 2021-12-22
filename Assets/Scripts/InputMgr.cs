@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class InputMgr : SingletonAuto<InputMgr>
 {
-    //[NonSerialized]
+    [NonSerialized]
     public float mouseX;
-    //[NonSerialized]
+    [NonSerialized]
     public float mouseY;
-    //[NonSerialized]
+    [NonSerialized]
     public float mouseScroll;
-    // [NonSerialized]
+    [NonSerialized]
     public float horizontal;
-    // [NonSerialized]
+    [NonSerialized]
     public float vertical;
     
-    void FixedUpdate()
+    void Update()
     {
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");
